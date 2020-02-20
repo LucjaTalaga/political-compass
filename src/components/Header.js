@@ -2,9 +2,9 @@ import React from 'react';
 
 function Header() {
     return(
-        <header>
+        <header className='flex-box'>
             <h1>Kompas polityczny</h1>
-            <p>2020 wersja polska</p>
+            <p>A.D. 2020 - wersja polska</p>
         </header>
         )
 }

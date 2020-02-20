@@ -1,0 +1,28 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Jestem społecznym lewicowcem",
+      "typeOfQuestion": "social",
+      "orientation": false
+    },
+    {
+      "id": 2,
+      "question": "Jestem społecznym prawicowcem",
+      "typeOfQuestion": "social",
+      "orientation": true
+    },
+    {
+      "id": 3,
+      "question": "Jestem ekonomicznym lewicowcem",
+      "typeOfQuestion": "economic",
+      "orientation": false
+    },
+    {
+      "id": 4,
+      "question": "Jestem ekonomicznym prawicowcem",
+      "typeOfQuestion": "economic",
+      "orientation": true
+    }
+  ]
+}
