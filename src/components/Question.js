@@ -4,7 +4,7 @@ class Question extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedValue: null
+            selectedValue: null,
         }
     }
 
@@ -16,47 +16,46 @@ class Question extends Component {
 
     handleSubmit = (e, selectedValue) => {
         e.preventDefault();
-        let {question, currentQuestion, setScore, setCurrentQuestion} = this.props;
+        let {question, currentQuestion, setScore, setCurrentQuestion, questionNumber} = this.props;
         setScore(question.typeOfQuestion, question.orientation, this.state.selectedValue);
         this.setState({
             selectedValue: null
         });
-        setCurrentQuestion(currentQuestion+1);
+        setCurrentQuestion(currentQuestion + 1);
     };
 
     render() {
-        let {selectedValue} = this.state;
+        let {selectedValue, redirect} = this.state;
         let {question} = this.props;
         return (
             <section>
-                <h2> {question.question}</h2>
+                <h1> {question.question}</h1>
                 <form onSubmit={e => this.handleSubmit(e, selectedValue)}>
-                    <label className='answers'>
-                        <input type='radio'name='answers' value='2' onChange={this.handleChange}/>
-                        <span className="answersCheckmark"></span>
-                        Zupełnie się zgadzam
-                    </label>
-                    <label className='answers'>
-                        <input type='radio'name='answers' value='1' onChange={this.handleChange}/>
-                        <span className="answersCheckmark"></span>
-                        Raczej się zgadzam
-                    </label>
-                    <label className='answers'>
-                        <input type='radio'name='answers' value='0' onChange={this.handleChange}/>
-                        <span className="answersCheckmark"></span>
-                        Nie mam zdania
-                    </label>
-                    <label className='answers'>
-                        <input type='radio'name='answers' value='-1' onChange={this.handleChange}/>
-                        <span className="answersCheckmark"></span>
-                        Raczej się nie zgadzam
-                    </label>
-                    <label className='answers'>
-                        <input type='radio'name='answers' value='-2' onChange={this.handleChange}/>
-                        <span className="answersCheckmark"></span>
-                        Zupełnie się nie zgadzam
-                    </label>
-                    <button disabled={selectedValue===null}>Dalej</button>
+                    <div className='formContainer flex-box'>
+                        <label className='answers'>
+                            <input type='radio' name='answers' value='2' onChange={this.handleChange}/>
+                            <span className="answersCheckmark">Zupełnie się zgadzam</span>
+                        </label>
+                        <label className='answers'>
+                            <input type='radio' name='answers' value='1' onChange={this.handleChange}/>
+                            <span className="answersCheckmark">Raczej się zgadzam</span>
+                        </label>
+                        <label className='answers'>
+                            <input type='radio' name='answers' value='0' onChange={this.handleChange}/>
+                            <span className="answersCheckmark">Nie mam zdania</span>
+                        </label>
+                        <label className='answers'>
+                            <input type='radio' name='answers' value='-1' onChange={this.handleChange}/>
+                            <span className="answersCheckmark">Raczej się nie zgadzam</span>
+                        </label>
+                        <label className='answers'>
+                            <input type='radio' name='answers' value='-2' onChange={this.handleChange}/>
+                            <span className="answersCheckmark">Zupełnie się nie zgadzam</span>
+                        </label>
+                    </div>
+                    <button disabled={selectedValue === null}
+                            className={selectedValue === null ? 'formButton disabled' : 'formButton'}>Dalej
+                    </button>
                 </form>
             </section>
         )

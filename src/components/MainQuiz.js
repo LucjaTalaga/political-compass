@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import data from '../questions';
 import Question from "./Question";
+import {Redirect} from "react-router-dom";
 
 let questions = data.questions;
 
@@ -10,7 +11,8 @@ class MainQuiz extends Component {
         this.state = {
             economicScore: 0,
             socialScore: 0,
-            currentQuestion: 1
+            currentQuestion: 1,
+            redirect: null
         }
     }
 
@@ -22,31 +24,49 @@ class MainQuiz extends Component {
             this.setState({
                 economicScore: this.state.economicScore + scoreAddition
             });
-        }
-        else if (typeOfQuestion === 'social') {
+        } else if (typeOfQuestion === 'social') {
             this.setState({
                 socialScore: this.state.socialScore + scoreAddition
             });
         }
     };
 
-    setCurrentQuestion = (id) =>{
-        this.setState({
-            currentQuestion: id
-        });
+    setCurrentQuestion = (id) => {
+        if (id > questions.length) {
+            this.setState({
+                redirect: "/results"
+            });
+        }
+        else {
+            this.setState({
+                currentQuestion: id
+            });
+        }
     };
+
     render() {
-        return (
-            <section className='main quiz'>
-                {questions.map(question => {
-                    if (this.state.currentQuestion === question.id) {
-                        return <Question question={question} currentQuestion={this.state.currentQuestion} setScore={this.setScore}
-                                         setCurrentQuestion={this.setCurrentQuestion}/>
-                    }
-                })}
-                <p>wynik ekonomiczny: {this.state.economicScore}, wynik społeczny: {this.state.socialScore}</p>
-            </section>
-        )
+        let questionNumber = questions.length;
+        if (this.state.redirect) {
+            return <Redirect to={{
+                pathname: `${this.state.redirect}`,
+                state: { id: '123' }
+            }} />
+        }
+        else {
+            return (
+                <section className='main flex-box'>
+                    <div className='startBox'>
+                        {questions.map(question => {
+                            if (this.state.currentQuestion === question.id) {
+                                return <Question question={question} currentQuestion={this.state.currentQuestion}
+                                                 setScore={this.setScore} questionNumber={questionNumber}
+                                                 setCurrentQuestion={this.setCurrentQuestion}/>
+                            }
+                        })}
+                    </div>
+                </section>
+            )
+        }
     }
 }
 

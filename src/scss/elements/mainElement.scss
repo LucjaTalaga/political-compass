@@ -1,4 +1,88 @@
 .main{
   width: 100vw;
-  height: 65vh;
+  height: 70vh;
+  justify-content: center;
+  min-height: 429px;
+  align-items: center;
+  .startBox {
+    border: 3px solid #ff0f00;
+    min-height: 344px;
+    min-width: 847px;
+    border-radius: 30px;
+    height: 90%;
+    width: 70%;
+    background-color: rgba(255, 238, 168, 0.8);
+
+    h1 {
+      text-align: center;
+      margin-top: 4%;
+    }
+
+    p {
+      cursor: pointer;
+      text-align: center;
+      margin-top: 5%;
+
+      .link {
+        color: #737373;
+        text-decoration: none;
+        font-size: 20px;
+        border: 0.75px solid #FAD648;
+        border-radius: 10px;
+        padding: 9px 20px;
+      }
+    }
+    form {
+      position: relative;
+
+      .formContainer {
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .answers {
+          margin: 4.68vh 10px;
+          display: inline-block;
+          font-size: 15px;
+          cursor: pointer;
+          position: relative;
+          padding-right: 4.58vw;
+          text-align: center;
+
+          input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+          }
+
+          .answersCheckmark {
+            padding: 8px 18px;
+            border: 2px solid #ff0f00;
+            border-radius: 35px;
+          }
+
+        }
+
+        .answers input:checked ~ .answersCheckmark {
+          background-color: #FAD648;
+        }
+      }
+
+      .formButton {
+        position: absolute;
+        bottom: -166px;
+        left: 70px;
+        padding: 10px 30px;
+        background-color: transparent;
+        color: darkblue;
+        text-decoration: none;
+        font-size: 20px;
+        border: 0.75px solid #FAD648;
+        border-radius: 10px;
+      }
+
+      .disabled {
+        color: grey;
+      }
+    }
+  }
 }

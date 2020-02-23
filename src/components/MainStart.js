@@ -7,9 +7,11 @@ import {
 class MainStart extends Component {
     render() {
         return (
-            <section className='main start'>
-                <h1>Witaj na stronie, gdzie możesz sprawdzić swoje poglądy polityczne</h1>
-                <Link to="/info">Start</Link>
+            <section className='main flex-box'>
+                <div className='startBox'>
+                    <h1>Witaj na stronie, gdzie możesz sprawdzić swoje poglądy polityczne</h1>
+                    <p><Link to="/info" className='link'>Start</Link></p>
+                </div>
             </section>
         )
     }

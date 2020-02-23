@@ -5,6 +5,7 @@ import MainStart from "./components/MainStart";
 import Footer from "./components/Footer";
 import MainInfo from "./components/MainInfo";
 import MainQuiz from "./components/MainQuiz";
+import Results from "./components/Results";
 
 import {
     HashRouter,
@@ -21,6 +22,7 @@ function App() {
                 <Route exact path='/' component={MainStart}/>
                 <Route path='/info' component={MainInfo}/>
                 <Route path='/quiz' component={MainQuiz}/>
+                <Route path='/results' component={Results}/>
             </Switch>
             <Footer/>
         </>
