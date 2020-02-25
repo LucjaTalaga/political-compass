@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+// komponent, który wyświetla pojedyncze pytanie, możliwe odpowiedzi oraz zapewnia obsługę odpowiedzi na pytanie.
 class Question extends Component {
     constructor(props) {
         super(props);
@@ -42,7 +42,7 @@ class Question extends Component {
                         </label>
                         <label className='answers'>
                             <input type='radio' name='answers' value='0' onChange={this.handleChange}/>
-                            <span className="answersCheckmark">Nie mam zdania</span>
+                            <span className="answersCheckmark">Nie mam zdania </span>
                         </label>
                         <label className='answers'>
                             <input type='radio' name='answers' value='-1' onChange={this.handleChange}/>

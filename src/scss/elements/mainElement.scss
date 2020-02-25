@@ -84,5 +84,54 @@
         color: grey;
       }
     }
+    .coordinates{
+
+      background-color: azure;
+      float: right;
+    }
+    .results{
+      flex-direction: column;
+      width: 65%;
+      align-items: center;
+      >span{
+        margin: 5px 0;
+      }
+      .coordsBox {
+        justify-content: center;
+        align-items: center;
+
+        >span:first-child {
+          transform: rotate(270deg);
+          text-align: center;
+          font-size: 14px;
+          height: 26px;
+          width: 48%;
+          margin-right: -19%;
+        }
+
+        >span:last-child {
+          transform: rotate(90deg);
+          text-align: center;
+          font-size: 14px;
+          height: 26px;
+          width: 48%;
+          margin-left: -19%;
+        }
+
+        .withCanvas {
+          position: relative;
+          canvas {
+          }
+          .resultDot {
+            position: absolute;
+            height: 5%;
+            width: 5%;
+            background-color: red;
+            border-radius: 50%;
+            display: inline-block;
+          }
+        }
+      }
+    }
   }
 }
