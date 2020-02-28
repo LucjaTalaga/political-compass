@@ -26,14 +26,18 @@ class MainQuiz extends Component {
             });
         }
     };
+    componentDidMount() {
+        if(this.props.economicScore!=0 || this.props.socialScore!=0){
+            this.setState({
+                redirect: '/info'
+            })
+        }
+    }
 
     render() {
         let questionNumber = questions.length;
         if (this.state.redirect) {
-            return <Redirect to={{
-                pathname: `${this.state.redirect}`,
-                state: { id: '123' }
-            }} />
+            return <Redirect to={this.state.redirect}/>
         }
         else {
             return (

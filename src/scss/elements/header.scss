@@ -6,10 +6,16 @@ header{
   justify-content: center;
   align-items: center;
   background-color: #cccccc;
+  min-height: 92px;
   h1{
     color: deeppink;
+    font-family: sigmar one;
+    font-size: 35px;
+    margin-bottom: 10px;
   }
   p{
     color: #707070;
+    font-family: 'Gochi Hand';
+    font-size: 19px;
   }
 }

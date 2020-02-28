@@ -5,5 +5,11 @@ footer{
   justify-content: center;
   align-items: center;
   background-color: #cccccc;
-  position: fixed;
+  min-height: 91.5px;
+  p{
+    color: darkcyan;
+    font-family: $font-alt;
+    font-size: 19px;
+    margin-bottom: 2vh;
+  }
 }

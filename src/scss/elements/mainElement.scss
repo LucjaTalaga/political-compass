@@ -1,13 +1,13 @@
 .main{
   width: 100vw;
-  height: 70vh;
+  height: 85vh;
   justify-content: center;
-  min-height: 429px;
+  min-height: 520px;
   align-items: center;
   .startBox {
     border: 3px solid #ff0f00;
-    min-height: 344px;
-    min-width: 847px;
+    min-height: 466px;
+    min-width: 447px;
     border-radius: 30px;
     height: 90%;
     width: 70%;
@@ -15,7 +15,9 @@
 
     h1 {
       text-align: center;
-      margin-top: 4%;
+      margin-top: 5%;
+      font-size: 26px;
+      line-height: 40px;
     }
 
     p {
@@ -24,12 +26,13 @@
       margin-top: 5%;
 
       .link {
-        color: #737373;
+        color: #ece5e5;
         text-decoration: none;
-        font-size: 20px;
-        border: 0.75px solid #FAD648;
-        border-radius: 10px;
+        font-size: 24px;
+        font-family: $font-alt;
+        border-radius: 45%;
         padding: 9px 20px;
+        background-color: #7B7B7B;
       }
     }
     form {
@@ -42,12 +45,13 @@
         .answers {
           margin: 4.68vh 10px;
           display: inline-block;
-          font-size: 15px;
+          font-size: 24px;
           cursor: pointer;
           position: relative;
           padding-right: 4.58vw;
           text-align: center;
-
+          color: #3E3E3E;
+          font-family: $font-alt;
           input {
             position: absolute;
             opacity: 0;
@@ -56,8 +60,8 @@
 
           .answersCheckmark {
             padding: 8px 18px;
-            border: 2px solid #ff0f00;
-            border-radius: 35px;
+            border-radius: 25px;
+            background-color: darkkhaki;
           }
 
         }
@@ -71,17 +75,18 @@
         position: absolute;
         bottom: -166px;
         left: 70px;
-        padding: 10px 30px;
-        background-color: transparent;
-        color: darkblue;
+        color: #ece5e5;
         text-decoration: none;
-        font-size: 20px;
-        border: 0.75px solid #FAD648;
-        border-radius: 10px;
+        font-size: 24px;
+        font-family: $font-alt;
+        border-radius: 45%;
+        padding: 9px 20px;
+        background-color: #7B7B7B;
+        border: none;
       }
 
       .disabled {
-        color: grey;
+        display: none;
       }
     }
     .coordinates{
@@ -91,8 +96,11 @@
     }
     .results{
       flex-direction: column;
-      width: 65%;
+      width: 59%;
+      justify-content: flex-start;
       align-items: center;
+      margin-left: -7%;
+      margin-top: 5%;
       >span{
         margin: 5px 0;
       }
@@ -133,5 +141,26 @@
         }
       }
     }
+    .resultsInfo{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 41%;
+      p{
+        font-size: 26px;
+        font-family: $font-alt;
+      }
+    }
+    #results{
+      font-size: 30px;
+    }
+  }
+
+}
+.startInfo{
+  height: 70vh;
+  min-height: 400px;
+  .startBox{
+    min-height: 300px;
   }
 }

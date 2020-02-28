@@ -32,6 +32,12 @@ class App extends Component {
             });
         }
     };
+    clearScore = () => {
+        this.setState({
+            economicScore: 0,
+            socialScore: 0
+        });
+    };
     render() {
         return (
             <HashRouter>
@@ -39,8 +45,8 @@ class App extends Component {
                     <Header/>
                     <Switch>
                         <Route exact path='/' component={MainStart}/>
-                        <Route path='/info' component={MainInfo}/>
-                        <Route path='/quiz' render={(props) => <MainQuiz setScore={this.setScore} />}/>
+                        <Route path='/info' render={(props) => <MainInfo clearScore={this.clearScore} />}/>
+                        <Route path='/quiz' render={(props) => <MainQuiz setScore={this.setScore} economicScore={this.state.economicScore} socialScore={this.state.socialScore} />}/>
                         <Route path="/results" render={(props) => <Results economicScore={this.state.economicScore} socialScore={this.state.socialScore}/>}/>
                     </Switch>
                     <Footer/>
