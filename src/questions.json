@@ -2,25 +2,25 @@
   "questions": [
     {
       "id": 1,
-      "question": "Jestem społecznym lewicowcem",
+      "question": "Każdy autorytet powinien być kwestionowany",
       "typeOfQuestion": "social",
       "orientation": -1
     },
     {
       "id": 2,
-      "question": "Jestem społecznym prawicowcem",
+      "question": "Religia powinna mieć duży wpływ na sprawy państwowe ",
       "typeOfQuestion": "social",
       "orientation": 1
     },
     {
       "id": 3,
-      "question": "Jestem ekonomicznym lewicowcem",
+      "question": "Korporacjom nie można ufać, że będą dobrowolnie chronić środowisko naturalne, więc potrzebne są regualacje w tej kwestii.",
       "typeOfQuestion": "economic",
       "orientation": -1
     },
     {
       "id": 4,
-      "question": "Jestem ekonomicznym prawicowcem",
+      "question": "Im gospodarka jest bardziej wolnorynkowa, tym bardziej wolni są ludzie, żyjący w takim państwie",
       "typeOfQuestion": "economic",
       "orientation": 1
     }

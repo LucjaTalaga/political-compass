@@ -35,6 +35,9 @@
         background-color: #7B7B7B;
       }
     }
+    #question{
+      margin-bottom: 2.5vw;
+    }
     form {
       position: relative;
 
@@ -43,7 +46,7 @@
         flex-wrap: wrap;
 
         .answers {
-          margin: 4.68vh 10px;
+          margin: 22px 1.2vw;
           display: inline-block;
           font-size: 24px;
           cursor: pointer;

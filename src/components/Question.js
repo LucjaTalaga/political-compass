@@ -29,7 +29,7 @@ class Question extends Component {
         let {question} = this.props;
         return (
             <section>
-                <h1> {question.question}</h1>
+                <h1 id='question'> {question.question}</h1>
                 <form onSubmit={e => this.handleSubmit(e, selectedValue)}>
                     <div className='formContainer flex-box'>
                         <label className='answers'>
