@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Redirect} from "react-router-dom";
 import data from '../questions';
 
 let howManyQuestions = data.questions.length;

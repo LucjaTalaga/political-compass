@@ -1,0 +1,96 @@
+
+
+.resultsBox {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    @media (min-width: 600px) {
+      flex-direction: initial;
+      justify-content: initial;
+      align-items: initial;
+    }
+
+  .results {
+    flex-direction: column;
+    width: 59%;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: -3%;
+    margin-top: 4%;
+    @media (min-width: 600px) {
+      min-width: 400px;
+    }
+
+    > span {
+      margin: 5px 0;
+      text-align: center;
+    }
+
+    .coordsBox {
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      > span{
+        text-align: center;
+        font-size: 15px;
+        height: 26px;
+        width: 50%;
+        position: absolute;
+      }
+      > span:first-child {
+        transform: rotate(270deg);
+        left:-79px;
+        top:43%;
+
+      }
+      > span:last-child {
+        transform: rotate(90deg);
+        top:46%;
+        right: -82px;
+      }
+
+      .withCanvas {
+        position: relative;
+
+        .coordinates {
+          background-color: azure;
+          min-height: 186px;
+          min-width: 186px;
+          @media (min-width: 600px) {
+            min-height: 260px;
+            min-width: 260px;
+          }
+        }
+
+        .resultDot {
+          position: absolute;
+          height: 5%;
+          width: 5%;
+          background-color: red;
+          border-radius: 50%;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .resultsInfo {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 41%;
+    margin-top: 40px;
+
+    p {
+      font-size: 26px;
+      font-family: $font-alt;
+      @media (min-width: 600px) {
+        font-size: 2.9vw;
+      }
+    }
+  }
+}
+#results{
+  font-size: 30px;
+}

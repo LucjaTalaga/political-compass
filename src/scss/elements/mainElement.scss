@@ -2,24 +2,34 @@
   width: 100vw;
   height: 85vh;
   justify-content: center;
-  min-height: 520px;
+  min-height: 700px;
   align-items: center;
+  @media (min-width: 600px){
+    min-height: 520px;
+  }
   .startBox {
     border: 3px solid #ff0f00;
-    min-height: 466px;
-    min-width: 447px;
+    min-height: 600px;
+    min-width: 285px;
     border-radius: 30px;
     height: 90%;
-    width: 70%;
+    width: 85%;
     background-color: rgba(255, 238, 168, 0.8);
-
+    position: relative;
+    @media (min-width: 600px) {
+      width: 70%;
+      min-height: 466px;
+      min-width: 550px;
+    }
     h1 {
       text-align: center;
       margin-top: 5%;
       font-size: 26px;
       line-height: 40px;
     }
-
+    #infoText{
+      font-size: 20px;
+    }
     p {
       cursor: pointer;
       text-align: center;
@@ -36,25 +46,27 @@
       }
     }
     #question{
-      margin-bottom: 2.5vw;
+      margin-bottom: 2vw;
     }
     form {
-      position: relative;
 
       .formContainer {
         justify-content: center;
         flex-wrap: wrap;
 
         .answers {
-          margin: 22px 1.2vw;
+          margin: 27px 0;
           display: inline-block;
           font-size: 24px;
           cursor: pointer;
           position: relative;
+          color: #3E3E3E;
           padding-right: 4.58vw;
           text-align: center;
-          color: #3E3E3E;
           font-family: $font-alt;
+          @media (max-width: 600px){
+            margin: 18px 2.2%;
+          }
           input {
             position: absolute;
             opacity: 0;
@@ -74,96 +86,38 @@
         }
       }
 
-      .formButton {
-        position: absolute;
-        bottom: -166px;
-        left: 70px;
-        color: #ece5e5;
-        text-decoration: none;
-        font-size: 24px;
-        font-family: $font-alt;
-        border-radius: 45%;
-        padding: 9px 20px;
-        background-color: #7B7B7B;
-        border: none;
-      }
 
-      .disabled {
-        display: none;
-      }
     }
-    .coordinates{
+    .formButton {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      //margin-top: 15px;
+      //margin-left: 4%;
+      color: #ece5e5;
+      text-decoration: none;
+      font-size: 24px;
+      font-family: $font-alt;
+      border-radius: 45%;
+      padding: 9px 20px;
+      background-color: #7B7B7B;
+      border: none;
+    }
 
-      background-color: azure;
-      float: right;
+    .disabled {
+      display: none;
     }
-    .results{
-      flex-direction: column;
-      width: 59%;
-      justify-content: flex-start;
-      align-items: center;
-      margin-left: -7%;
-      margin-top: 5%;
-      >span{
-        margin: 5px 0;
-      }
-      .coordsBox {
-        justify-content: center;
-        align-items: center;
 
-        >span:first-child {
-          transform: rotate(270deg);
-          text-align: center;
-          font-size: 14px;
-          height: 26px;
-          width: 48%;
-          margin-right: -19%;
-        }
-
-        >span:last-child {
-          transform: rotate(90deg);
-          text-align: center;
-          font-size: 14px;
-          height: 26px;
-          width: 48%;
-          margin-left: -19%;
-        }
-
-        .withCanvas {
-          position: relative;
-          canvas {
-          }
-          .resultDot {
-            position: absolute;
-            height: 5%;
-            width: 5%;
-            background-color: red;
-            border-radius: 50%;
-            display: inline-block;
-          }
-        }
-      }
-    }
-    .resultsInfo{
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 41%;
-      p{
-        font-size: 26px;
-        font-family: $font-alt;
-      }
-    }
-    #results{
-      font-size: 30px;
-    }
   }
 
 }
-.startInfo{
-  height: 70vh;
-  min-height: 400px;
-  .startBox{
-    min-height: 300px;
+@media (min-width: 600px) {
+  .startInfo {
+    height: 70vh;
+    min-height: 400px;
+
+    .startBox {
+      min-height: 300px;
+    }
   }
 }

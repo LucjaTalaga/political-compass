@@ -28,7 +28,7 @@ class Question extends Component {
         let {selectedValue, redirect} = this.state;
         let {question} = this.props;
         return (
-            <section>
+            <>
                 <h1 id='question'> {question.question}</h1>
                 <form onSubmit={e => this.handleSubmit(e, selectedValue)}>
                     <div className='formContainer flex-box'>
@@ -53,11 +53,12 @@ class Question extends Component {
                             <span className="answersCheckmark">Zupełnie się nie zgadzam</span>
                         </label>
                     </div>
-                    <button disabled={selectedValue === null}
-                            className={selectedValue === null ? 'formButton disabled' : 'formButton'}>Dalej
-                    </button>
+
                 </form>
-            </section>
+                <button disabled={selectedValue === null}
+                        className={selectedValue === null ? 'formButton disabled' : 'formButton'} onClick={e => this.handleSubmit(e, selectedValue)}>Dalej
+                </button>
+            </>
         )
     }
 }
