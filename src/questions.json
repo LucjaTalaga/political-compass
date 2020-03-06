@@ -23,6 +23,54 @@
       "question": "Im gospodarka jest bardziej wolnorynkowa, tym bardziej wolni są ludzie, żyjący w takim państwie",
       "typeOfQuestion": "economic",
       "orientation": 1
+    },
+    {
+      "id": 5,
+      "question": "Ważniejsze jest resocjalizowanie przestępców, niż ich karanie",
+      "typeOfQuestion": "social",
+      "orientation": -1
+    },
+    {
+      "id": 6,
+      "question": "Zawsze będę wspierał(a) swój kraj, niezależnie od tego czy ma rację czy nie",
+      "typeOfQuestion": "social",
+      "orientation": 1
+    },
+    {
+      "id": 7,
+      "question": "Ci, którzy zarabiają najwięcej, powinni dokładać się najwięcej do wspólnej kasy, płacąc najwyższe podatki",
+      "typeOfQuestion": "economic",
+      "orientation": -1
+    },
+    {
+      "id": 8,
+      "question": "Jedyną powinnością społeczną firmy jest dawanie zysku jej udziałowcom",
+      "typeOfQuestion": "economic",
+      "orientation": 1
+    },
+    {
+      "id": 9,
+      "question": "Pary homoseksualne powinny mieć takie same prawa, jak pary heteroseksualne",
+      "typeOfQuestion": "social",
+      "orientation": -1
+    },
+    {
+      "id": 10,
+      "question": "Polityka kulturalna państwa powinna skupiać się na wzmacnianiu tożsamości narodowej ",
+      "typeOfQuestion": "social",
+      "orientation": 1
+    },
+    {
+      "id": 11,
+      "question": " \"Od każdego według jego zdolności, każdemu według potrzeb\" to dobra zasada ",
+      "typeOfQuestion": "economic",
+      "orientation": -1
+    },
+    {
+      "id": 12,
+      "question": "Służbę zdrowia należy sprywatyzować",
+      "typeOfQuestion": "economic",
+      "orientation": 1
     }
   ]
 }

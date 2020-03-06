@@ -24,8 +24,8 @@ class Results extends Component {
     // funkcja wypisująca wyniki, jakie uzyskał użytkownik. Pierwszy parametr określa rodzaj wyniku (ekonomiczny, społeczny), drugi określa wynik.
     printResults = (scoreType, score) => {
         let {economicScore, socialScore} = this.props;
-        let percentageEconomicScore = Math.abs((economicScore*100)/howManyQuestions);
-        let percentageSocialScore = Math.abs((socialScore*100)/howManyQuestions);
+        let percentageEconomicScore = Math.abs((economicScore*100)/howManyQuestions).toFixed(0);
+        let percentageSocialScore = Math.abs((socialScore*100)/howManyQuestions).toFixed(0);
         let result = '';
         if(scoreType === 'economic'){
             if(economicScore>0){
@@ -39,13 +39,13 @@ class Results extends Component {
             }
         }
         if(scoreType === 'social'){
-            if(economicScore>0){
+            if(socialScore>0){
                 result = `Społeczny konserwatyzm: ${percentageSocialScore}%`;
             }
-            if(economicScore<0){
+            if(socialScore<0){
                 result = `Społeczny liberalizm: ${percentageSocialScore}%`;
             }
-            if(economicScore===0){
+            if(socialScore===0){
                 result = 'Społeczne centrum';
             }
         }
