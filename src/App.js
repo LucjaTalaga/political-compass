@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import MainInfo from "./components/MainInfo";
 import MainQuiz from "./components/MainQuiz";
 import Results from "./components/Results";
-
+ 
 import {
     HashRouter,
     Route,
